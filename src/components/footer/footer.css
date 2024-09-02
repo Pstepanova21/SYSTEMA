@@ -1,0 +1,98 @@
+footer {
+  width: 100%;
+  padding: 50px;
+  background-color: #0b162d;
+  color: #fff;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.footer-header {
+  color: #4d7efe;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.footer-header-left {
+  display: flex;
+  align-items: center;
+}
+
+.footer-logo {
+  width: 50px;
+  height: auto;
+  margin-right: 15px;
+}
+
+.footer-header-left h1 {
+  color: #4d7efe;
+  font-size: 24px;
+  margin: 0;
+}
+
+.footer-header-right {
+  display: flex;
+  align-items: center;
+}
+
+.login-button {
+  background: none;
+  color: #fff;
+  border: none;
+  font-size: 14px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  padding: 0;
+}
+
+.login-icon {
+  font-weight: 700;
+  width: 16px;
+  height: 16px;
+  margin-right: 150px;
+}
+
+.footer-content {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer-column {
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-column h2 {
+  color: #4d7efe;
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.footer-column p {
+  font-size: 14px;
+}
+
+.footer-column .vk-container {
+  display: flex;
+  align-items: center;
+}
+
+.footer-column .vk {
+  width: 24px;
+  height: 24px;
+  margin-right: 8px;
+}
+
+.footer-bottom {
+  margin-top: 20px;
+  text-align: center;
+  font-size: 12px;
+}
