@@ -1,42 +1,76 @@
-import React from "react";
+import React, { useState } from "react";
 import "./footer.css";
 import footer from "../../assets/images/footer.png";
 import vk from "../../assets/images/free-icon-logo-12868069 1.png";
 import loginIcon from "../../assets/images/enter 1.png";
 
 function Footer() {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const handleLoginClick = () => {
+    setIsModalOpen(true);
+  };
+
+  const handleCloseModal = () => {
+    setIsModalOpen(false);
+  };
+
   return (
-    <footer>
-      <div className="footer-header">
-        <div className="footer-header-left">
-          <img src={footer} alt="Logo" className="footer-logo" />
-          <h1>SYSTEMA</h1>
-        </div>
-        <div className="footer-header-right">
-          <button className="login-button">
-            ВОЙТИ
-            <img src={loginIcon} alt="Login" className="login-icon" />
-          </button>
-        </div>
-      </div>
-      <div className="footer-content">
-        <div className="footer-column">
-          <h2>ПАРТНЕРЫ</h2>
-          <p>Информация о партнерах</p>
-        </div>
-        <div className="footer-column">
-          <h2>ПРИСОЕДИНЯЙТЕСЬ</h2>
-          <div className="vk-container">
-            <img src={vk} alt="vk" className="vk" />
-            <p>ВКОНТАКТЕ</p>
+    <>
+      <footer>
+        <div className="footer-header">
+          <div className="footer-header-left">
+            <img src={footer} alt="Logo" className="footer-logo" />
+            <h1>SYSTEMA</h1>
+          </div>
+          <div className="footer-header-right">
+            <button className="login-button" onClick={handleLoginClick}>
+              ВОЙТИ
+              <img src={loginIcon} alt="Login" className="login-icon" />
+            </button>
           </div>
         </div>
-        <div className="footer-column">
-          <h2>РЕЖИМ РАБОТЫ</h2>
-          <p>с 6.66 до 10.111</p>
+        <div className="footer-content">
+          <div className="footer-column">
+            <h2>ПАРТНЕРЫ</h2>
+            <p>Информация о партнерах</p>
+          </div>
+          <div className="footer-column">
+            <h2>ПРИСОЕДИНЯЙТЕСЬ</h2>
+            <div className="vk-container">
+              <img src={vk} alt="vk" className="vk" />
+              <p>ВКОНТАКТЕ</p>
+            </div>
+          </div>
+          <div className="footer-column">
+            <h2>РЕЖИМ РАБОТЫ</h2>
+            <p>с 6.66 до 10.111</p>
+          </div>
         </div>
-      </div>
-    </footer>
+      </footer>
+
+      {isModalOpen && (
+        <div className="modal">
+          <div className="modal-content">
+            <span className="close-button" onClick={handleCloseModal}>
+              &times;
+            </span>
+            <h2>Вход</h2>
+            <form>
+              <label>
+                Логин:
+                <input type="text" name="username" />
+              </label>
+              <label>
+                Пароль:
+                <input type="password" name="password" />
+              </label>
+              <button type="submit">Войти</button>
+            </form>
+          </div>
+        </div>
+      )}
+    </>
   );
 }
 
